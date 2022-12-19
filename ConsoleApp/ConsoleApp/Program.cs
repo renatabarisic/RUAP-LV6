@@ -40,8 +40,8 @@ namespace CallRequestResponseService
                             "input1",
                             new StringTable()
                             {
-                                ColumnNames = new string[] {"MPG", "Cyl", "Displacement", "Horsepower", "Weight", "Acceleration", "Year", "CountryCode", "Model"},
-                                Values = new string[,] {  { "18", "8", "307", "130", "3504", "12", "70", "1", "chevrolet chevelle malibu" },  { "11", "8", "318", "210", "4382", "13", "70", "1", "dodge d200" },  }
+                                ColumnNames = new string[] {"Recency", "Frequency", "Monetary", "Time", "Class"},
+                                Values = new string[,] {  { "2", "50", "12500", "98", "1" },  { "1", "24", "6000", "77", "0" },  }
                             }
                         },
                     },
@@ -49,10 +49,10 @@ namespace CallRequestResponseService
                     {
                     }
                 };
-                const string apiKey = "98CSqi1II5Ie57lBKNeJwIqtLPNAJ+4t0oUAMqKX23RZi3GtfXTlISS7oFKjK3OrpZHom1/byrWa+AMCTLywag=="; // Replace this with the API key for the web service
+                const string apiKey = "L4ImW0WuotW8DT86wFVcApu+IvI5VzDQBgk4I+xuc3+OchXfnWbIGJuuSD4det4V5ObPPJPKqHgZ+AMCdxpMqA=="; // Replace this with the API key for the web service
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/2972f513925048409339ad140e31005d/services/57b1465b6a7a412690e3ec02504ba4e7/execute?api-version=2.0&details=true");
+                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/2972f513925048409339ad140e31005d/services/26269e5bb67642a48e6d2605dedec384/execute?api-version=2.0&details=true");
 
                 // WARNING: The 'await' statement below can result in a deadlock if you are calling this code from the UI thread of an ASP.Net application.
                 // One way to address this would be to call ConfigureAwait(false) so that the execution does not attempt to resume on the original context.
